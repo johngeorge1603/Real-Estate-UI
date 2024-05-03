@@ -1,0 +1,121 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .messages{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: scroll;
+
+        h1{
+            font-weight: 300;
+        }
+
+        .message{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            
+
+            img{
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .chatBox{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        justify-content: space-between;
+
+        .top{
+            background-color: #f7c14b85;
+            padding: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .close{
+                cursor: pointer;
+            }
+        }
+
+        .center{
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            padding: 20px;
+            overflow-y: scroll;
+            gap: 20px;
+
+            .chatMessage{
+                width: 50%;
+
+                span{
+                    font-size: 12px;
+                    padding: 2px;
+                    border-radius: 5px;
+                    background-color: #fff58a52;
+                }
+
+                &.own{
+                    align-self: flex-end;
+                    text-align: right;
+                }
+            }
+        }
+
+        .bottom{
+            border-top: 2px solid #f7c14b85;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            textarea{
+                flex: 3;
+                height: 100%;
+                border: none;
+                padding: 20px;
+            }
+
+            button{
+                flex: 1;
+                background-color: #f7c14b85;
+                height: 100%;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
